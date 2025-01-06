@@ -26,10 +26,15 @@
         <span>Sonucunuz {{result}} kWh</span>
         <span>Eviniz enerji tüketimi konusunda son derece verimlidir!</span>
         {%elif result > 150 and result < 300%}
+
+
         <img class="rez__img" src="../../static/img/planet_medium.svg" alt="">
         <span>Sonucunuz {{result}} kWh</span>
         <span>Evınızın enerji verimliliği orta düzeydedir!</span>
         {%elif result >= 300%}
+        <span>Çevreyi korumaya yardımcı olmak ister misiniz? Formu doldurun ve sizin için çevre dostu bir tesisat oluşturalım!</span>
+        <a href="{{ url_for('form') }}">Link</a>
+
         <img class="rez__img" src="../../static/img/planet_bad.svg" alt="">
         <span>Sonucunuz {{result}} kWh</span>
         <span>Evınızın enerji verimliliği ortalamadan düşüktür!</span>
@@ -38,6 +43,7 @@
     <h2 class="main__title main__title--margin">Evinizin enerji tüketimi:</h2>
     <div class="main__rez" id="end">
         <span>Evinizin enerji tüketimi: {{ energy_consumption }} kW</span>
+        <a href="{{ url_for('form') }}">Link</a>
     </div>
     {% endblock %}
   </main>
@@ -45,4 +51,5 @@
 
   </footer>
 </body>
+
 </html>

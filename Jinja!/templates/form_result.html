@@ -1,0 +1,18 @@
+<!-- Kullanıcının verilerini çıktı olarak gösteren bir sayfa oluşturun -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Results</title>
+</head>
+<body>
+    {%block content %}
+    <h1>Form Results</h1>
+    <p>Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Your address: {{ address }}</p>
+    <p>Date: {{ date }}</p>
+    {% endblock %}
+</body>
+</html>
